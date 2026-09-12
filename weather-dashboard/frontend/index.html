@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="app-header">
+      <h1>🌤️ Weather Dashboard</h1>
+      <p class="subtitle">Search any city for live weather conditions</p>
+    </header>
+
+    <form id="search-form" class="search-form">
+      <input
+        type="text"
+        id="city-input"
+        placeholder="Enter city name (e.g. Chennai, London, Tokyo)"
+        autocomplete="off"
+        required
+      />
+      <button type="submit" id="search-btn">Search</button>
+    </form>
+
+    <div id="status-area" class="status-area" aria-live="polite"></div>
+
+    <section id="weather-card" class="weather-card hidden">
+      <h2 id="weather-city"></h2>
+      <p id="weather-region" class="region"></p>
+      <div class="weather-main">
+        <span id="weather-temp" class="temp"></span>
+        <span id="weather-desc" class="desc"></span>
+      </div>
+      <div class="weather-details">
+        <div><strong>Wind Speed:</strong> <span id="weather-wind"></span></div>
+        <div><strong>Wind Direction:</strong> <span id="weather-winddir"></span></div>
+        <div><strong>Last Updated:</strong> <span id="weather-time"></span></div>
+      </div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

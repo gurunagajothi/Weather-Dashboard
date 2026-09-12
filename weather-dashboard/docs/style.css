@@ -1,0 +1,158 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.app {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
+  padding: 32px;
+  width: 100%;
+  max-width: 480px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.app-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.app-header h1 {
+  margin: 0 0 4px 0;
+  color: #1f2937;
+  font-size: 28px;
+}
+
+.subtitle {
+  margin: 0;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.search-form {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+#city-input {
+  flex: 1;
+  padding: 12px 14px;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+#city-input:focus {
+  border-color: #4facfe;
+}
+
+#search-btn {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  background: #4facfe;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+#search-btn:hover {
+  background: #2f8fe0;
+}
+
+#search-btn:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+}
+
+.status-area {
+  min-height: 24px;
+  text-align: center;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.status-area.error {
+  color: #dc2626;
+  font-weight: 600;
+}
+
+.status-area.loading {
+  color: #4b5563;
+}
+
+.weather-card {
+  background: #f9fafb;
+  border-radius: 12px;
+  padding: 24px;
+  text-align: center;
+  border: 1px solid #e5e7eb;
+}
+
+.weather-card.hidden {
+  display: none;
+}
+
+#weather-city {
+  margin: 0;
+  color: #111827;
+  font-size: 22px;
+}
+
+.region {
+  margin: 2px 0 16px 0;
+  color: #6b7280;
+  font-size: 13px;
+}
+
+.weather-main {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.temp {
+  font-size: 48px;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.desc {
+  font-size: 16px;
+  color: #4b5563;
+  font-weight: 500;
+}
+
+.weather-details {
+  display: grid;
+  gap: 8px;
+  font-size: 14px;
+  color: #374151;
+  text-align: left;
+  border-top: 1px solid #e5e7eb;
+  padding-top: 12px;
+}
+
+.footer-note {
+  text-align: center;
+  margin-top: 16px;
+  font-size: 12px;
+  color: #9ca3af;
+}
